@@ -13,7 +13,8 @@ URL: <a href="http://34.71.234.201/">http://34.71.234.201/</a>
 ## 2) Configuração do MySQL
 Faça o processo de configuração de um servidor de banco de dados MySQL
 Utilize secret em conjunto com as variáveis de ambiente
-Utilize disco persistente para gravar as informações dos dados
+Utilize disco persistente para gravar as informações dos dados.
+Obs.: Execute o seguinte comando para criar a secret: kubectl create secret generic mysql-pass --from-literal=password='a1s2d3f4'
 
 ## 3) Desafio Go!
 Crie um aplicativo Go que disponibilize um servidor web na porta 8000 que quando acessado seja exibido em HTML (em negrito) Code.education Rocks!
