@@ -1,23 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  name: nginx  
-spec: # spec do deployment
+  name: hello-nginx
+spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: hello-nginx
   template:
     metadata:
       labels:
-        app: nginx
+        app: hello-nginx
     spec:
       containers:
       - name: nginx
-        image: nginx:1.16-alpine        
-        command: ["/bin/sh","-c","touch /usr/share/nginx/html/index.html; nginx -g 'daemon off;'"]
+        image: nginx:1.17-alpine
         ports:
         - containerPort: 80
+
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "100m"
+          limits:
+            cpu: "200m"
+            memory: "200Mi"
 
         volumeMounts:
         - mountPath: /etc/nginx/conf.d
@@ -29,5 +36,5 @@ spec: # spec do deployment
         configMap:
           name: nginx-conf
           items:
-          - key: nginx.conf
-            path: nginx.conf
+            - key: nginx.conf
+              path: nginx.conf
