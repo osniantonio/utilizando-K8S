@@ -1,0 +1,5 @@
+steps:
+
+- id: "Copiar o arquivo .HTML"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['exec','-t','app','cp','index.html','/usr/share/nginx/html/index.html']
