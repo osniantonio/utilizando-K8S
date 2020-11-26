@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webserver-go
+
+spec:
+  selector:
+    matchLabels:
+      app: webserver-go
+
+  template:
+    metadata:
+      labels:
+        app: webserver-go
+
+    spec:
+      containers:
+      - name: webserver-go
+        image: osniantonio/utilizando-k8s
+        ports:
+        - containerPort: 8000

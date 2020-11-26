@@ -1,9 +1,5 @@
 ## Utilizando K8S
 
-Pronto para mais uma fase? Vamos lá!
-
-Utilizando os conhecimentos adquiridos até o momento, crie os arquivos declarativos do Kubernetes para que os seviços abaixo possam ser executados.
-
 ## 1) Servidor Web - Nginx
 Utilize a imagem base do Nginx Alpine
 Disponibilize 3 réplicas
@@ -14,7 +10,7 @@ URL: <a href="http://34.71.234.201/">http://34.71.234.201/</a>
 Faça o processo de configuração de um servidor de banco de dados MySQL
 Utilize secret em conjunto com as variáveis de ambiente
 Utilize disco persistente para gravar as informações dos dados.
-Obs.: Execute o seguinte comando para criar a secret: kubectl create secret generic mysql-pass --from-literal=password='a1s2d3f4'
+Obs.: Execute o seguinte comando para criar a secret: kubectl create secret generic mysql-pass --from-literal=password='SENHA'
 
 ## 3) Desafio Go!
 Crie um aplicativo Go que disponibilize um servidor web na porta 8000 que quando acessado seja exibido em HTML (em negrito) Code.education Rocks!
@@ -23,12 +19,4 @@ Como ótimo desenvolvedor(a), você deverá criar o teste dessa função.
 Ative o processo de CI no Google Cloud Build para garantir que a cada PR criada faça com que os testes sejam executados.
 Gere a imagem desse aplicativo de forma otimizada e publique-a no Docker Hub
 Utilizando o Kubernetes, disponibilize o serviço do tipo Load Balancer que quando acessado pelo browser acesse a aplicação criada em Go.
-Entrega via Github:
-
-Cria uma pasta para cada etapa dessa fase contendo os arquivos .yml do kubernetes
-No caso do Desafio Go, o fonte da aplicação, Dockerfile, etc também devem ficar disponíveis.
-Crie um arquivo README.md e nele informe o endereço da imagem gerada no Docker Hub.
-
-Lembre-se, estamos aqui para te tirar da sua zona de conforto, porém nunca se esqueça que nosso suporte está de braços abertos para lhe ajudar.
-
-Boa sorte e conte sempre conosco!
+URL: <a href="https://hub.docker.com/r/osniantonio/utilizando-k8s">https://hub.docker.com/r/osniantonio/utilizando-k8s</a>
